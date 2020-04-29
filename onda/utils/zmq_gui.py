@@ -136,8 +136,7 @@ class ZmqDataListener(QtCore.QObject):
             msgpack_msg = full_msg[1]
 
             # Deserializes the message and emits the signal.
-            # msg = msgpack.unpackb(msgpack_msg) # unpacks utf8 by default but guis expect byte literals
-            msg = msgpack.unpackb(msgpack_msg, raw=True)
+            msg = msgpack.unpackb(msgpack_msg)
             self.zmqmessage.emit(msg)
 
 
