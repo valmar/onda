@@ -43,7 +43,7 @@ def get_peakfinder8_info():
         peakfinder8 information.
     """
     return named_tuples.Peakfinder8Info(
-        asic_nx=1024, asic_ny=512, nasics_x=1, nasics_y=6
+        asic_nx=1024, asic_ny=512, nasics_x=1, nasics_y=8
     )
 
 
@@ -121,4 +121,4 @@ def detector_data(event):
 
     return event.data[event.framework_info["detector_label"]]["data.adc"][
         event.current_frame, ...
-    ].reshape(6 * 512, 1024)
+    ].reshape(8 * 512, 1024)
