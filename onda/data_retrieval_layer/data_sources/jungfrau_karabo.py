@@ -14,9 +14,9 @@
 # Copyright 2014-2019 Deutsches Elektronen-Synchrotron DESY,
 # a research centre of the Helmholtz Association.
 """
-Retrieval of AGIPD 1M detector data from Karabo.
+Retrieval of Jungfrau detector 4M detector data from Karabo (SPB/SFX IRD).
 
-This module contains functions that retrieve data from an AGIPD 1M x-ray detector
+This module contains functions that retrieve data from an Jungfrau 8M x-ray detector
 using the Karabo framework.
 """
 from __future__ import absolute_import, division, print_function
@@ -35,7 +35,7 @@ from onda.utils import data_event, named_tuples  # pylint: disable=unused-import
 def get_peakfinder8_info():
     # type () -> named_tuples.Peakfinder8Info
     """
-    Retrieves the peakfinder8 information for the AGIPD 1M detector.
+    Retrieves the peakfinder8 information for the Jungrfrau 4M detector.
 
     Returns:
 
@@ -57,7 +57,7 @@ def get_peakfinder8_info():
 def get_num_frames_in_event(event):
     # type: (data_event.DataEvent) -> int
     """
-    Gets the number of frames in an AGIPD 1M event retrieved from Karabo.
+    Gets the number of frames in an Jungfrau 4M event retrieved from Karabo.
 
     This function retrieves the number of frames in each event for the detector
     identified by the 'karabo_detector_label' entry in the 'DataRetrievalLayer'
@@ -94,7 +94,7 @@ def get_num_frames_in_event(event):
 def detector_data(event):
     # type: (data_event.DataEvent) -> numpy.ndarray
     """
-    Retrieves from Karabo one frame of AGIPD 1M detector data.
+    Retrieves from Karabo one frame of Jungfrau 4M detector data.
 
     This function retrieves a data frame from the detector identified by the
     'karabo_detector_label' entry in the 'DataRetrievalLayer' configuration parameter
