@@ -102,6 +102,7 @@ setup(
         "fabio>=0.9.0",
         "future>=0.17.1",
         "h5py>=2.9.0",
+        "karabo_bridge>=0.6.0",
         "msgpack>=0.6.1",
         "msgpack-numpy>=0.4.4.3",
         "numpy>=1.16.4",
