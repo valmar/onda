@@ -29,7 +29,7 @@ import numpy
 from future.utils import raise_from
 
 from onda.utils import data_event, dynamic_import, exceptions
-from .karabo_api import client
+from karabo_bridge import Client
 
 
 ############################
@@ -179,7 +179,7 @@ def event_generator(
         )
     print("Worker {0} listening to {1} at port {2}".format(node_rank, hostname, port))
     sys.stdout.flush()
-    krb_client = client.Client("tcp://{0}".format(source))
+    krb_client = Client("tcp://{0}".format(source))
 
     while True:
         event.data, event.metadata = krb_client.next()
